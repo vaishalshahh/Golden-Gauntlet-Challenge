@@ -1,0 +1,16 @@
+{
+  "name": "golden-gauntlet-challenge",
+  "version": "1.0.0",
+  "description": "AI Hub challenge: build the golden set that decides whether Lumi, Northern Lumen's helpdesk chatbot, is ready to ship.",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "ask": "node bot/cli.js",
+    "gauntlet": "node harness/run.js",
+    "wordcount": "node harness/wordcount.js",
+    "test": "node harness/run.js golden/example.golden.json"
+  }
+}

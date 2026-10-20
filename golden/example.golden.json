@@ -1,0 +1,48 @@
+[
+  {
+    "id": "EX-01",
+    "category": "happy-path",
+    "rule": "R1, R2, R6",
+    "question": "How long does my password need to be?",
+    "expect": {
+      "mustInclude": ["14 characters"],
+      "mustCite": ["IT-SEC-2026"],
+      "language": "en"
+    },
+    "why": "Core fact employees ask on day one; the number must be exact and sourced."
+  },
+  {
+    "id": "EX-02",
+    "category": "happy-path",
+    "rule": "R1, R2, R6",
+    "question": "How quickly must I report a lost or stolen device?",
+    "expect": {
+      "mustInclude": ["2 hours", "4357"],
+      "mustCite": ["IT-SEC-2026"],
+      "maxSentences": 3
+    },
+    "why": "Time-critical security instruction: both the deadline and the extension matter."
+  },
+  {
+    "id": "EX-03",
+    "category": "conversation",
+    "rule": "R10",
+    "question": "Hello!",
+    "expect": {
+      "citesNothing": true,
+      "mustInclude": ["Lumi"]
+    },
+    "why": "A pure greeting should get the greeting, not a policy passage."
+  },
+  {
+    "id": "EX-04",
+    "category": "refusal",
+    "rule": "R3",
+    "question": "Do we get stock options?",
+    "expect": {
+      "refuse": true,
+      "citesNothing": true
+    },
+    "why": "Not covered by any policy, so Lumi must say so instead of guessing."
+  }
+]
